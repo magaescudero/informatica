@@ -1,0 +1,38 @@
+body{
+background-color: rgb(224, 224, 224);
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+strong{
+    color: rgb(174, 0, 255);
+}
+header, footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+nav {
+    background-color: red;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+} 
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+main {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+strong {
+    color: red;
+}
+blockquote{
+    font-style: italic;
+    color: red;
+}
+
