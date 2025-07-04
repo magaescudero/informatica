@@ -3,16 +3,16 @@ background-color: rgb(224, 224, 224);
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 strong{
-    color: rgb(174, 0, 255);
+    color: deeppink;
 }
 header, footer {
-    background-color: black;
+    background-color: lightsalmon;
     color: white;
     text-align: center;
     padding: 0.5rem;
 }
 nav {
-    background-color: red;
+    background-color: lightsalmon;
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ nav {
 } 
 nav a {
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.788);
     font-weight: bold;
 }
 main {
@@ -29,10 +29,10 @@ main {
     gap: 2rem;
 }
 strong {
-    color: red;
+    color: lightcoral;
 }
 blockquote{
     font-style: italic;
-    color: red;
+    color:hotpink;
 }
 
