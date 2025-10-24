@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="Fomulario">
+        <h1>Registro de Usuario</h1>
+        <label for="nombre">Nombre</label>
+        <input type="text"id="nombre" name="nombre" required><br><br>
+        <label for="correo electrónico">Correo electrónico</label>
+        <input type="email"id="correo electrónico" name="correo electrónico" required><br><br>
+        <label for="clave">Clave</label>
+        <input type="password" id="clave" name="clave" required> <br><br>
+        <label for="fecha">Fecha</label>
+        <input type="date" name="Fecha" id="Fecha" required><br><br>
+        <fieldset>
+            <legend>Hobbie</legend>
+            <input type="checkbox" name="Hobbie" id="Deporte" value="Deporte">
+            <label for="Deporte">Deporte</label>
+            <input type="checkbox" name="Hobbie" id="Musica" value="Musica">
+            <label for="Musica">Música</label>
+            <input type="checkbox" name="Hobbie" id="Lectura" value="Lectura">
+            <label for="Lectura">Lectura</label>
+            <input type="checkbox" name="Hobbie" id="Arte" value="Arte">
+            <label for="Arte">Arte</label>
+        </fieldset>
+        <button type="submit">Enviar</button><br><br>
+        <button type="reset">Borrar</button><br><br>
+    </form>
+    <form>
+    <script>
+        document.getElementById("Formulario").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const fechaInput = document.getElementById("Fecha").value;
+            const fechaNacimiento = new Date(fechaInput);
+            const hoy = new Date();
+            let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+            let cumpleEsteAño = new Date(hoy.getFullYear(), fechaNacimiento.getMonth(), fechaNacimiento.getDate());
+            if (hoy < cumpleEsteAño) {
+                edad--; 
+            }
+            if (hoy > cumpleEsteAño) {
+                cumpleEsteAño.setFullYear(hoy.getFullYear() + 1);
+            }
+            let diferenciaMs = cumpleEsteAño - hoy;
+            let diasRestantes = Math.ceil(diferenciaMs / (1000 * 60 * 60 * 24));
+            alert(`Tu edad es: ${edad} años.\nFaltan ${diasRestantes} días para tu próximo cumpleaños`)
+        });
+       </script> 
+    </form>
+</body>
+</html>
