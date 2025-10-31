@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 4 - Calcular promedio</title>
+</head>
+<body style="font-family:Arial; text-align:center;">
+<h2>Calcular promedio</h2>
+<button onclick="promedio()">Ingresar notas</button>
+<p id="resultado"></p>
+
+<script>
+function promedio() {
+  let n1 = parseFloat(prompt("Primera nota:"));
+  let n2 = parseFloat(prompt("Segunda nota:"));
+  let n3 = parseFloat(prompt("Tercera nota:"));
+  let prom = (n1 + n2 + n3) / 3;
+  let msg = prom >= 6 ? "Aprobado " : "Desaprobado ";
+  document.getElementById("resultado").innerText = 
+    `Promedio: ${prom.toFixed(2)} → ${msg}`;
+}
+</script>
+</body>
+</html>

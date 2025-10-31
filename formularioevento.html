@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Evento con formulario</title>
+<style>
+  body { font-family: Arial; text-align: center; margin-top: 50px; }
+  input { margin: 5px; padding: 8px; }
+  button { padding: 8px 15px; cursor: pointer; }
+</style>
+</head>
+<body>
+<h2>Calcular días hasta un evento</h2>
+
+<form id="formEvento">
+  <input type="text" id="nombreEvento" placeholder="Nombre del evento (ej: cumpleaños)" required>
+  <input type="date" id="fechaEvento" required>
+  <button type="button" onclick="calcularDias()">Calcular</button>
+</form>
+
+<p id="resultado"></p>
+
+<script>
+function calcularDias() {
+  const nombre = document.getElementById("nombreEvento").value;
+  const fecha = new Date(document.getElementById("fechaEvento").value);
+  const hoy = new Date();
+  
+  // Calcular diferencia en días
+  const diferencia = Math.ceil((fecha - hoy) / (1000 * 60 * 60 * 24));
+
+  if (diferencia > 0) {
+    document.getElementById("resultado").innerText = 
+      `Faltan ${diferencia} días para ${nombre}. `;
+  } else if (diferencia === 0) {
+    document.getElementById("resultado").innerText = 
+      `¡Hoy es el día del ${nombre}! `;
+  } else {
+    document.getElementById("resultado").innerText = 
+      `El evento "${nombre}" ya ocurrió. `;
+  }
+}
+</script>
+</body>
+</html>

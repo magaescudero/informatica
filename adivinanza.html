@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 3 - Juego de adivinanza</title>
+</head>
+<body style="font-family:Arial; text-align:center;">
+<h2>Juego de adivinanza</h2>
+<button onclick="adivinar()">Jugar</button>
+<p id="resultado"></p>
+
+<script>
+function adivinar() {
+  const secreto = Math.floor(Math.random() * 10) + 1;
+  let intento = parseInt(prompt("Adivina el número (1 al 10):"));
+  if (intento === secreto) {
+    document.getElementById("resultado").innerText = "¡Adivinaste! ";
+  } else {
+    document.getElementById("resultado").innerText = `No, era ${secreto}. `;
+  }
+}
+</script>
+</body>
+</html>
